@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bookshelf Apps</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header class="book-header">
+		<h1 class="book-header-detail">Bookshelf Apps</h1>
+	</header>
+	<main>
+		<section class="book book-input">
+			<h2 class="book-title">Input New Book</h2>
+			<form id="book-form-input">
+				<div class="input-detail">
+					<label for="book-name-input">Title</label><br>
+					<input type="text" id="book-name-input" placeholder="Enter book title" required>
+				</div>
+				<div class="input-detail">
+					<label for="book-writer-input">Writer</label><br>
+					<input type="text" id="book-writer-input" placeholder="Enter book writer's" required>
+				</div>
+				<div class="input-detail">
+					<label for="book-year-input">Year</label><br>
+					<input type="number" id="book-year-input" placeholder="Enter book year of publication" required>
+				</div>
+				<div class="input-check-detail">
+					<label for="book-check-input">Finished reading</label>
+					<input type="checkbox" id="book-check-input">
+				</div>
+				<button class="button" id="book-submit" type="submit">Put book on the bookshelf</button>
+			</form>
+		</section>
+		<section class="book book-search">
+			<h2 class="book-title">Search book</h2>
+			<form id="book-search">
+				<label for="book-search-input">Title</label>
+				<input type="text" id="book-search-input"  placeholder="Enter book title">
+				<button class="button" id="book-search-button">Search</button>
+			</form>
+		</section>
+		<div class=book-shelf-container>
+			<section class="book book-shelf">
+				<h2 class="book-title">Not finished reading</h2>
+				<div id="book-list-uncomplete" class="book-list"></div>
+			</section>
+			<section class="book book-shelf">
+				<h2 class="book-title">Finished reading</h2>
+				<div id="book-list-complete" class="book-list"></div>
+			</section>
+		</div>
+	</main>
+
+	<script src="js/data.js" type="text/javascript"></script>
+	<script src="js/dom.js" type="text/javascript"></script>
+	<script src="js/script.js" type="text/javascript"></script>
+</body>
+</html>
